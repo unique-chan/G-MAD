@@ -286,10 +286,6 @@ Additional MAP mods:
 |weferlingen_winter.gm_weferlingen_winter|Weferlingen (Winter)| Arma 3 Global Mobilization|
 ||||
 
----
-
----
-
 This was a brief summary of only the Arma 3-related content.
 
 If there are any corrections or improvements to be made, please contact us.
