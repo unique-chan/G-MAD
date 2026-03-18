@@ -12,6 +12,7 @@
   <a href="#"><img alt="Python 3" src="https://img.shields.io/badge/Python-3-blue?logo=python&logoColor=white"></a>
   <a href="#"><img alt="Arma 3" src="https://img.shields.io/badge/Game-Arma 3-red?logo=steam"></a>
   <a href="#"><img alt="Windows10-11" src="https://img.shields.io/badge/Platform-Windows_10_|_11-orange?logo=microsoft"></a>
+  <a href="#"><img alt="MIT" src="https://img.shields.io/badge/License-MIT-green?logo=MIT"></a>
 </p>
 
 <hr>
