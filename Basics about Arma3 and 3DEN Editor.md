@@ -137,16 +137,14 @@ Since the purpose of this document is to explain the Arma 3 game itself, we will
 
 ## 4. MOD and DLC Management
 
-Arma 3 allows users to subscribe to various mods from the Steam community and then load those mods into the game.  
-You need to distinguish between DLC and mods, and also between subscribing to a mod and loading a mod. The differences are as follows.
+Arma 3 allows users to subscribe to various mods from the Steam community and then load those mods into the game. You need to distinguish between DLC and mods, and also between subscribing to a mod and loading a mod. The differences are as follows.
 
 > DLC → officially distributed in Arma 3  
 > MOD → distributed through the Steam user community  
 > Subscribe to a mod in the Steam community → automatically download the mod to disk, but it is not applied to the game  
 > Load a mod in the game → the mod is downloaded to disk and also applied to the game
 
-To subscribe to a MOD, go to the Steam Library, enter the Community Hub, and then go to the Workshop, where you can find various MODs.  
-Find the mod you want and click `Subscribe`, and it will be downloaded automatically.
+To subscribe to a MOD, go to the Steam Library, enter the Community Hub, and then go to the Workshop, where you can find various MODs. Find the mod you want and click `Subscribe`, and it will be downloaded automatically.
 
 <p align="center">
     <img alt="Welcome" src="figs\md_img\steamCommunityHub.png" />
@@ -282,5 +280,3 @@ Additional MAP mods:
 This was a brief summary of only the Arma 3-related content.
 
 If there are any corrections or improvements to be made, please contact us.
-
-<br/><br/><br/>
