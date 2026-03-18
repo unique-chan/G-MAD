@@ -5,9 +5,9 @@
 
 * This document explains the knowledge required to understand, use, and improve the `OpenAMOD` tool.
 
-* Most of the content in this document is available on the official ARMA 3 online community wiki, but since the documentation is extensive, only the necessary parts are included here.
+* Most of the content in this document is available on the official Arma 3 online community wiki, but since the documentation is extensive, only the necessary parts are included here.
 
-* If you would like to learn more than what is covered in this document, please refer to the [ARMA 3 Online Community Wiki](https://community.bistudio.com/wiki/Category:Arma_3:_Scripting_Commands).
+* If you would like to learn more than what is covered in this document, please refer to the [Arma 3 Online Community Wiki](https://community.bistudio.com/wiki/Category:Arma_3:_Scripting_Commands).
 
 * If you find any errors in this document or would like to add more content, please feel free to contact us.
 
@@ -41,7 +41,7 @@ If you place the mouse cursor over the spot where the character is shown on that
 
 From this screen, you can create and debug the mission you want using `EDITOR`, and then run it through `SCENARIO` to obtain the dataset you want.
 
-> ⚠️ You must clearly distinguish between `EDITOR` and `SCENARIO`. The files used bWWy `EDITOR` are located in the document folder (`Documents\ARMA 3`), whereas the folders used by `SCENARIO` are located under the Steam installation path in the Arma 3 folder (`C:\Program Files (x86)\Steam\steamapps\common\Arma 3`). There can be multiple `EDITOR` folders depending on the user profile, but there is only one folder used by `SCENARIO`.
+> ⚠️ You must clearly distinguish between `EDITOR` and `SCENARIO`. The files used bWWy `EDITOR` are located in the document folder (`Documents\Arma 3`), whereas the folders used by `SCENARIO` are located under the Steam installation path in the Arma 3 folder (`C:\Program Files (x86)\Steam\steamapps\common\Arma 3`). There can be multiple `EDITOR` folders depending on the user profile, but there is only one folder used by `SCENARIO`.
 
 > ⚠️ The mission folder name handled in `EDITOR` is `mission`, while the mission folder name handled in `SCENARIO` is `Mission` (the first letter differs in lowercase/uppercase).
 
@@ -61,18 +61,13 @@ At a high level, `OpenAMOD` works as follows:
 
 3. It moves the created mission under the Steam folder and runs it through `Play Scenario`.
 
-4. As ARMA 3 runs, Python reads the generated scenario files from the folder and organizes them.
+4. As Arma 3 runs, Python reads the generated scenario files from the folder and organizes them.
 
 5. Once data generation is complete, it cleans up the dummy files.
 
 Among these steps, the stages that require knowledge of the Arma 3 game itself rather than the SQF language are steps 2 and 3.
 
-Since this document is intended to explain ARMA 3,  
-we will describe the ARMA 3-related stages in more detail.
-
-For item 3, we will cover Mission creation;  
-for item 4, simple mod management;  
-and for item 5, Arma 3 startup parameters.
+In Section 3, we cover mission creation; in Section 4, basic mod management; and in Section 5, Arma 3 startup parameters.
 
 ---
 
@@ -90,7 +85,7 @@ Whether you edit it in the `EDEN Editor` or later work on it directly under the 
 
 3. Run the code that creates the scene, such as `play1.sqf`.
 
-In the case of `init.sqf`, it is generated on the Python side, so here we will focus on the `mission.sqm` that is created and distributed within ARMA 3.
+In the case of `init.sqf`, it is generated on the Python side, so here we will focus on the `mission.sqm` that is created and distributed within Arma 3.
 
 ### 3.1 Writing `mission.sqm`
 
@@ -111,49 +106,47 @@ When you open it, a window like the following appears.
     <img alt="Welcome" src="figs\md_img\edenEditor_General.png" />
 </p>
 
-The sections you should pay close attention to are States and Misc.
-
-If you click the States section, a window like the following appears.
+Please pay attention to `States` and `Misc`. If you click `States`, a window like the following appears.
 
 <p align="center">
     <img alt="Welcome" src="figs\md_img\edenEditor_General_States.png" />
 </p>
 
 You should check the boxes as shown in the screenshot above.  
-In the case of Show briefing/debriefing, this is the step where related content is explained before and after the mission starts. Since it is not necessary, you can uncheck both of them.  
-In particular, it is important to disable debriefing, because the game returns to the main screen after data generation ends only when this setting is configured properly. Therefore, you should check these two items carefully.  
-The remaining settings were left at their default values.
+- In the case of `Show briefing/debriefing`, this is the step where related content is explained before and after the mission starts. Since it is not necessary, you can uncheck both of them.  
+- In particular, it is important to `disable debriefing`, because the game returns to the main screen after data generation ends only when this setting is configured properly. Therefore, you should check these two items carefully.  
+- The remaining settings were left at their default values.
 
-Also, if you look at the Misc section, you will see the following option.
+Also, if you look at the `Misc` section, you will see the following option.
 
 <p align="center">
     <img alt="Welcome" src="figs\md_img\edenEditor_General_Misc.png" />
 </p>
 
-Here, you should uncheck Binarize the Scenario File.  
-It is not critically important, but if you binarize the file, the `mission.sqm` file will be saved in an unreadable format.  
-Also, when saving the `mission.sqm` file, there is an option to binarize it, so you must make sure to check that setting when saving.
+Here, you should `uncheck Binarize the Scenario File`.  
+- If you binarize the file, the `mission.sqm` file will be saved in an unreadable format.  
+- Also, when saving the `mission.sqm` file, there is an option to binarize it, so you must make sure to check that setting when saving.
 
 There are various other configuration values as well, but these appear to be the important ones to set.
 
 Currently, the maps for which `mission.sqm` has been modified are Altis, Malden 2035, Stratis, Weferlingen, and Weferlingen (Winter). The modified `mission.sqm` files are located in the mission folder of this project.
 
-Since the purpose of this document is to explain the ARMA 3 game itself, we will skip writing files such as `init.sqf`.
+Since the purpose of this document is to explain the Arma 3 game itself, we will skip writing files such as `init.sqf`.
 
 ---
 
 ## 4. MOD and DLC Management
 
-ARMA 3 allows users to subscribe to various mods from the Steam community and then load those mods into the game.  
+Arma 3 allows users to subscribe to various mods from the Steam community and then load those mods into the game.  
 You need to distinguish between DLC and mods, and also between subscribing to a mod and loading a mod. The differences are as follows.
 
-> DLC → officially distributed in ARMA 3  
+> DLC → officially distributed in Arma 3  
 > MOD → distributed through the Steam user community  
 > Subscribe to a mod in the Steam community → automatically download the mod to disk, but it is not applied to the game  
 > Load a mod in the game → the mod is downloaded to disk and also applied to the game
 
 To subscribe to a MOD, go to the Steam Library, enter the Community Hub, and then go to the Workshop, where you can find various MODs.  
-Find the mod you want and click Subscribe, and it will be downloaded automatically.
+Find the mod you want and click `Subscribe`, and it will be downloaded automatically.
 
 <p align="center">
     <img alt="Welcome" src="figs\md_img\steamCommunityHub.png" />
@@ -200,9 +193,9 @@ If you open each folder, you will see that the data is organized into `.pbo` fil
 This is an important part that allows `OpenAMOD` to run automatically.  
 Using Startup Parameters, you can launch the generated Scenario simply by executing a single command-line instruction.
 
-More details can be found at [ARMA 3: Startup Parameters](https://community.bistudio.com/wiki/Arma_3:_Startup_Parameters), but in this document we will describe the parts needed for `OpenAMOD` and those that may be applicable later.
+More details can be found at [Arma 3: Startup Parameters](https://community.bistudio.com/wiki/Arma_3:_Startup_Parameters), but in this document we will describe the parts needed for `OpenAMOD` and those that may be applicable later.
 
-In general, strings should be written in the `"text"` form, paths should use backslashes as in `C:\User\"ARMA 3"\`, and if a folder name contains spaces, it should be wrapped in `\"`.
+In general, strings should be written in the `"text"` form, paths should use backslashes as in `C:\User\"Arma 3"\`, and if a folder name contains spaces, it should be wrapped in `\"`.
 
 ### 5.1 Performance-related Parameters
 
@@ -222,7 +215,7 @@ In general, strings should be written in the `"text"` form, paths should use bac
 
 | parameter | Parameter explanation | ✓ / ✗ / ？|
 |---|---|---|
-|-skipIntro| Skip ARMA III logo | ✓|
+|-skipIntro| Skip Arma III logo | ✓|
 |-noSplash | Skip Nvidia and similar logos | ✓ |
 |-window| Force the game to run in windowed mode | ✓|
 |-init=\<sqf script>| Execute an SQF script at the main menu | ✓|
@@ -233,7 +226,7 @@ In general, strings should be written in the `"text"` form, paths should use bac
 
 Debug files are saved as `***.rpt` files under `C:\Users\{username}\AppData\Local\Arma 3\`.
 
-Since the ARMA 3 executable is `C:\Program Files (x86)\Steam\steamapps\common\Arma 3\Arma 3_x64.exe`, if you enter the following command, ARMA 3 will automatically load the mods and run the mission.
+Since the Arma 3 executable is `C:\Program Files (x86)\Steam\steamapps\common\Arma 3\Arma 3_x64.exe`, if you enter the following command, Arma 3 will automatically load the mods and run the mission.
 
 ```powershell
 # on Windows Powershell or Terminal
@@ -269,7 +262,7 @@ Additional MAP mods:
 |chernarus_winter.Chernarus_Winter|Chernarus Winter|CUP Terrains - Maps|
 |everon.eden|Everon|CUP Terrains - CWA|
 |kolgujev.cain|Everon|CUP Terrains - CWA|
-|livonia.Enoch|Livonia|ARMA 3 Contact|
+|livonia.Enoch|Livonia|Arma 3 Contact|
 |malden.abel|Malden|CUP Terrains - CWA|
 |malden2035.Malden|Malden 2035|Arma 3 Free DLC|
 |nogova.noe|Nogova|CUP Terrains - CWA|
