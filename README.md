@@ -29,7 +29,7 @@
 
 
 ### Quick start
-- We assume that you have already finished setting up Arma 3 by our [tutorial]() in advance.
+- We assume that you have already finished setting up Arma 3 by our [tutorial](Tutorial.md) in advance.
 - Please install necessary python libraries in `requirements.txt`
   ```bashshell
   conda create -n g-mad python=3.8 -y
