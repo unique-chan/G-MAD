@@ -1,5 +1,7 @@
 # Basic knowledge related to `Arma3` and `Eden Editor`
 
+😃 Please install Arma3 via Steam under C Drive of your Windows PC in advance!
+
 * This document explains the knowledge required to understand, use, and improve the `G-MAD` in the future.
 * Most of the content in this document is also available on the official Arma3 online community wiki, but because the wiki is extensive, only the necessary parts are summarized here.
 * For more information than what is included in this document, please refer to the [Arma3 Online Community Wiki](https://community.bistudio.com/wiki/Category:Arma_3:_Scripting_Commands).
