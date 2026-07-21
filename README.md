@@ -19,6 +19,7 @@ G-MAD: A Game-Based Data Generation Framework for Multi-View RGB-T Aerial Object
 </p>
 
 ### Updates
+- (07/2026) Our work has been accepted to ACM Multimedia (MM) 2026 (Main Proceeding / OSS Track)
 - (06/2026) 📢 Using our G-MAD, we construct and release a new large-scale RGB-T multi-view benchmark dataset named **AMOD** for aerial object detection: Download our dataset [here](https://huggingface.co/datasets/unique-chan/AMOD)!
 - (03/2026) Welcome!
 
@@ -71,7 +72,14 @@ G-MAD: A Game-Based Data Generation Framework for Multi-View RGB-T Aerial Object
 
 
 ### Citation
-- Paper is coming soon!
+~~~
+@inproceedings{G-MAD2026,
+  title={G-MAD: A Game-Based Data Generation Framework for Multi-View RGB-T Aerial Object Detection},
+  author={Kim, Yechan and Park, JongHyun and Yoon, Dongho and Jung, Namhoon and Jeon, Moongu},
+  year={2026},
+  booktitle={ACM International Conference on Multimedia}
+}
+~~~
 
 
 ### Contribution
