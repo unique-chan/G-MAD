@@ -23,6 +23,9 @@ G-MAD: A Game-Based Data Generation Framework for Multi-View RGB-T Aerial Object
 - (06/2026) 📢 Using our G-MAD, we construct and release a new large-scale RGB-T multi-view benchmark dataset named **AMOD** for aerial object detection: Download our dataset [here](https://huggingface.co/datasets/unique-chan/AMOD)!
 - (03/2026) Welcome!
 
+### Acknowledgement
+We would like to thank 🎖️ Sihyun Kim (Yonsei Univ.) - GMAD Code Design, 🎖️ SooYeon Kim (KRIT) - AMOD Experimentation, 🎖️ Sung Heon Kim (GIST), 🎖️ Junggyun Oh (HDC), and 🎖️ Prof. Yeongmin Ko (KNU) for their assistance.
+
 
 ### Quick start
 - We assume that you have already finished setting up Arma 3 by our [tutorial](Tutorial.md) in advance.
