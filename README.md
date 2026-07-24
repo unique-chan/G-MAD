@@ -24,7 +24,7 @@ G-MAD: A Game-Based Data Generation Framework for Multi-View RGB-T Aerial Object
 - (03/2026) Welcome!
 
 ### Acknowledgement
-We would like to thank 🎖️ Sihyun Kim (Yonsei Univ.) - GMAD Code Design, 🎖️ SooYeon Kim (KRIT) - AMOD Experimentation, 🎖️ Sung Heon Kim (GIST), 🎖️ Junggyun Oh (HDC), and 🎖️ Prof. Yeongmin Ko (KNU) for their assistance.
+We would like to thank 🎖️ Sihyun Kim (Yonsei Univ.) - G-MAD Code Design, 🎖️ SooYeon Kim (KRIT) - [AMOD Experimentation](https://github.com/unique-chan/AMOD), 🎖️ Sung Heon Kim (GIST), 🎖️ Junggyun Oh (HDC), and 🎖️ Prof. Yeongmin Ko (KNU) for their assistance.
 
 
 ### Quick start
